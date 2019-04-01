@@ -1,25 +1,52 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MainLobby from './MainLobby';
 
 class App extends Component {
   render() {
+    const cardData = {
+      cardBinders: [
+        {
+          CardId: 0,
+          Title: 'Johnson',
+          Info: [
+            {
+              cardInfo: 'I am Johnson'
+            }
+          ]
+        },
+        {
+          CardId: 1,
+          Title: 'Simmon',
+          Info: [
+            {
+              cardInfo: 'I am Simmon'
+            }
+          ]
+        },
+        {
+          CardId: 2,
+          Title: 'Anderson',
+          Info: [
+            {
+              cardInfo: 'I am Anderson'
+            }
+          ]
+        },
+        {
+          CardId: 3,
+          Title: 'Ericson',
+          Info: [
+            {
+              cardInfo: 'I am Ericson'
+            }
+          ]
+        }
+      ]
+  }
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className = "Card-container">
+        <MainLobby cardData={cardData} />
       </div>
     );
   }
